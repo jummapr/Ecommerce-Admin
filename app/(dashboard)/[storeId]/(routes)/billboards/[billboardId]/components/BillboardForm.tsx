@@ -143,7 +143,7 @@ const BillboardForm: FC<BillboardFormProps> = ({ initialData }) => {
               </FormItem>
             )}
           />
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             <FormField
               control={form.control}
               name="label"
@@ -155,6 +155,7 @@ const BillboardForm: FC<BillboardFormProps> = ({ initialData }) => {
                       disabled={loading}
                       {...field}
                       placeholder="Billboard label"
+                      className="w-full"
                     />
                   </FormControl>
                   <FormMessage />

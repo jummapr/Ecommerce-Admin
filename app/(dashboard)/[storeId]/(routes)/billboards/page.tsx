@@ -3,6 +3,7 @@ import { FC } from "react";
 import {BillboardClient} from "./components/Client";
 import prismadb from "@/lib/prismadb";
 import { BillboardColumn } from "./components/columns";
+import PagesLoading from '@/components/loading/pagesLoading';
 
 interface pageProps {
   params: {

@@ -30,35 +30,35 @@ const Dashboard: FC<DashboardProps> = async ({ params }) => {
         <div className="grid gap-4 grid-cols-3">
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 p-2">
-              <CardTitle className="text-sm font-medium">
+              <CardTitle className="text-xs md:text-sm font-medium">
                 Total Revenue
               </CardTitle>
               <DollarSign className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">
+              <div className="text-base md:text-2xl font-bold">
                 {formatter.format(totalRevenue)}
               </div>
             </CardContent>
           </Card>
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 p-2">
-              <CardTitle className="text-sm font-medium">Sales</CardTitle>
-              <CreditCard className="h-4 w-4 text-muted-foreground" />
+              <CardTitle className="text-xs md:text-sm font-medium">Sales</CardTitle>
+              <CreditCard className="h-4  w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">+{salesCount}</div>
+              <div className="text-base md:text-2xl  font-bold">+{salesCount}</div>
             </CardContent>
           </Card>
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 p-2">
-              <CardTitle className="text-sm font-medium">
+              <CardTitle className="text-xs md:text-sm font-medium">
                 Products In Stock
               </CardTitle>
               <Package className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{stockCount}</div>
+              <div className="text-base md:text-2xl font-bold">{stockCount}</div>
             </CardContent>
           </Card>
         </div>

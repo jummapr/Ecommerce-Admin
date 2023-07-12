@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 
 import prismadb from "@/lib/prismadb";
 import SettingsForm from "./components/SettingsForm";
+import SettingSkeleton from "@/components/loading/settingLoading";
 
 interface SettingsPageProps {
   params: {
