@@ -28,20 +28,21 @@ const MobileMenuNav: FC<MobileMenuNavProps> = ({}) => {
         onClose={onClose}
       >
         {/* BackGround */}
-        <div className="fixed inset-0 bg-black bg-opacity-25" />
+        <div className="fixed inset-0  bg-opacity-25" />
 
         {/* Dialog Position */}
         <div className="fixed inset-0 z-40 flex">
           <Dialog.Panel
             className={
-              "relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-6 shadow-xl"
+              "relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white dark:bg-background py-4 pb-6 shadow-xl"
             }
           >
             {/* Close Button */}
-            <div className="flex  justify-end px-4 items-start">
-              <IconButton icon={<X size={15} />} onClick={onClose} />
+            <div className="flex  justify-end px-4 items-start dark:bg-background">
+              <IconButton icon={<X size={15} />} className="dark:bg-background" onClick={onClose} />
             </div>
 
+            {/* @ts-ignore */}
             <MainNav className="flex-col gap-7" onClose={onClose}/>
           </Dialog.Panel>
         </div>
